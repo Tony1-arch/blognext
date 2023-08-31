@@ -1,0 +1,78 @@
+
+.ccard{
+      height: 100%;
+      width: 60%;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+     
+}
+.ccard .img{
+      width: 670px;
+      height: 370px;
+      object-fit: cover;
+   
+      
+}
+.ccard .par{
+      font-size: 1.3rem;
+      margin: 40px 60px;
+}
+.ccard .img{
+      width: 270px;
+      height: 270px;
+      object-fit: cover;
+      transition: all 9s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.ccard:hover .img{
+     transform: scale(1.1);
+     transition: all 9s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.ccard .title{
+      font-size: 1.5rem;
+      color: black;
+      text-transform: uppercase;
+}
+.card .title:hover{
+      color: rgb(1, 38, 160);
+      
+}
+.ccard .btn{
+      background-color: aliceblue;
+      margin-top: 30px;
+      padding: 5px 19px 5px 19px;
+      outline: none;
+      color: black;
+      border-radius: 10px;
+      transition: all 5s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.ccard .btn:hover{
+      border:2px solid rgb(3, 3, 218);
+      color:blue;
+      transform: scale(1.1);
+      
+}
+
+@media screen and (max-width: 768px) {
+      .ccard{
+           
+            width: 90%;
+           
+           
+      }
+      .img{
+            width: 200px;
+            height: 270px;
+           
+      }
+
+      .par{
+            font-size: 1.3rem;
+            margin: 20px 2px;
+      }
+    }

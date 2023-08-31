@@ -1,0 +1,68 @@
+.main {
+      display:grid;
+      grid-template-columns: auto auto auto auto;
+      justify-content: space-around;
+      align-items: center;
+      
+      
+    }
+.card{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+}
+.card .img{
+      width: 270px;
+      height: 270px;
+      object-fit: cover;
+      transition: all 5s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.card:hover .img{
+     transform: scale(1.1);
+     
+}
+
+.card .title{
+      font-size: 1.5rem;
+      color: black;
+      text-transform: uppercase;
+}
+.card .title:hover{
+      color: rgb(1, 38, 160);
+      
+}
+.card .btn{
+      background-color: aliceblue;
+      margin-top: 30px;
+      padding: 5px 12px 5px 12px;
+      outline: none;
+      color: black;
+      border-radius: 10px;
+      transition: all 5s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.card .btn:hover{
+      border:2px solid rgb(3, 3, 218);
+      color:blue;
+      transform: scale(1.1);
+      
+}
+
+@media screen and (max-width: 768px) {
+      .main {
+            display:grid;
+            grid-template-columns: auto ;
+           
+            
+            
+          }
+
+          .card{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+      }
+    }

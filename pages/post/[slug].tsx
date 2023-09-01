@@ -3,6 +3,7 @@ import {PortableText} from '@portabletext/react'
 import { client } from "../../utils/configSanity"
 import { urlFor } from "../../utils/configSanity"
 import Link from "next/link"
+import Image from "next/image"
 import styles from '../post/Post.module.css'
 // ./frontend/pages/post/[slug].tsx
 
@@ -12,7 +13,7 @@ const Post = ({post}) => {
     <div className={styles.ccard}>
       <h1 className={styles.title}>{post?.title}</h1>
       <div>
-            <img className={styles.img}  src={urlFor(post?.mainImage).url() } alt={post?.title}/>
+            <Image fill={true} className={styles.img}  src={urlFor(post?.mainImage).url() } alt={post?.title}/>
       </div>
       <div className={styles.par}>
       <PortableText value={post?.body}   />

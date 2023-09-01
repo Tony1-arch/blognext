@@ -1,6 +1,7 @@
 
 
 import Link from 'next/link'
+import Image from "next/image"
 import styles from "./Pages.module.css"
 import { client } from '../utils/configSanity';
 import {urlFor} from "../utils/configSanity";
@@ -15,7 +16,7 @@ export default function Blog({ posts }) {
             <h2 className={styles.title} >{post.title}</h2>
             <div>
 
-            <img className={styles.img}  src={urlFor(post?.mainImage).url() } alt={post?.title}/>
+            <Image fill={true} className={styles.img}  src={urlFor(post?.mainImage).url() } alt={post?.title}/>
            </div>
            <Link href={`/post/${post.slug.current}`}>
            <button className={styles.btn} >READ MORE</button>

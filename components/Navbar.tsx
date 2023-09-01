@@ -19,15 +19,15 @@ export default function Navbar() {
          </p>
          </Link>
          </li><li className={styles.navitem}>
-                        <Link href='/about' className={styles.link}>
+                        <Link href='#' className={styles.link}>
                           <p className={isOpen === false ? 
                                     styles.navlink : styles.navlink+' '+styles.active}
                                     onClick={openMenu}>About</p>
                         </Link>
                     </li>
-                    <li className={styles.navitem}>
-                        <Link href='/contact' className={styles.link}>
-                         <p className={isOpen === false ? 
+                    <li className={styles.navitem}  >
+                        <Link href='#' className={styles.link}>
+                         <p  className={isOpen === false ? 
                                     styles.navlink : styles.navlink+' '+styles.active}
                                     onClick={openMenu}>Contact</p>
                         </Link>

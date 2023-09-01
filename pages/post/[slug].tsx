@@ -7,13 +7,13 @@ import Image from "next/image"
 import styles from '../post/Post.module.css'
 // ./frontend/pages/post/[slug].tsx
 
-const Post = ({post}) => {
+const Post = ({post}:any) => {
   
   return (
     <div className={styles.ccard}>
       <h1 className={styles.title}>{post?.title}</h1>
       <div>
-            <Image fill={true} className={styles.img}  src={urlFor(post?.mainImage).url() } alt={post?.title}/>
+            <img className={styles.img}  src={urlFor(post?.mainImage).url() } alt={post?.title}/>
       </div>
       <div className={styles.par}>
       <PortableText value={post?.body}   />
@@ -34,12 +34,12 @@ export async function getStaticPaths() {
   )
 
   return {
-    paths: paths.map((slug) => ({params: {slug}})),
+    paths: paths.map((slug:any) => ({params: {slug}})),
     fallback: true,
   }
 }
 
-export async function getStaticProps(context) {
+export async function getStaticProps(context:any) {
   // It's important to default the slug so that it doesn't return "undefined"
   const { slug = "" } = context.params
   const post = await client.fetch(`

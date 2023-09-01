@@ -7,16 +7,16 @@ import { client } from '../utils/configSanity';
 import {urlFor} from "../utils/configSanity";
 
 
-export default function Blog({ posts }) {
+export default function Blog({ posts }:any) {
       return (
         <div  className={styles.main}>
           
-          {posts.map((post) => (
+          {posts.map((post :any) => (
            <div className={styles.card}  key={post?._id}>
             <h2 className={styles.title} >{post.title}</h2>
             <div>
 
-            <Image fill={true} className={styles.img}  src={urlFor(post?.mainImage).url() } alt={post?.title}/>
+            <img className={styles.img}  src={urlFor(post?.mainImage).url() } alt={post?.title}/>
            </div>
            <Link href={`/post/${post.slug.current}`}>
            <button className={styles.btn} >READ MORE</button>
